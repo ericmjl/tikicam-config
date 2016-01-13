@@ -10,7 +10,7 @@ def update_directory(dir):
     tries = 0
     # Keep trying to git pull until success, or until tries = 30
     while status != 0:
-        status = os.system('git pull')
+        status = os.system('sudo git pull')
         tries += 1
         if status != 0:
             print('Trying again. Attempt {0} out of 30.'.format(tries))
