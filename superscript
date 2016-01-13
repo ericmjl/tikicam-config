@@ -1,0 +1,13 @@
+#! /bin/sh
+
+
+### BEGIN INIT INFO
+# Provides:         bluetooth and wifi
+# Default-Start:    2 3 4 5
+# Default-Stop:     0 1 6
+### END INIT INFO
+
+sudo hciconfig hci0 up
+sudo ifup wlan0=mit_secure
+sudo python /home/pi/github/picamera-auto/picam.py &
+sudo python /home/pi/github/bluetooth-proximity-tracker/le_scanner.py &
