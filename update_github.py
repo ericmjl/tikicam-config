@@ -24,3 +24,11 @@ os.chdir('/home/pi/github/tikicam-config')
 os.system('sudo cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf')
 os.system('sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf')
 print('Done.')
+
+
+# Copy superscript file.
+print('Updating superscript...')
+os.chdir('/home/pi/github/tikicam-config')
+os.system('sudo cp superscript /etc/init.d/superscript')
+os.system('sudo chmod 644 /etc/init.d/superscript')
+print('Done.')
