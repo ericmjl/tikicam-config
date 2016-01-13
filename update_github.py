@@ -1,6 +1,9 @@
 import os
 
 def update_directory(dir):
+    """
+    Updates the particular directory from github. Assumes that the directory is under git version control.
+    """
     print('Updating {dir}...'.format(dir=dir))
     os.chdir(dir)
     status = 1
@@ -39,5 +42,6 @@ print('Done.')
 print('Updating superscript...')
 os.chdir('/home/pi/github/tikicam-config')
 os.system('sudo cp superscript /etc/init.d/superscript')
-os.system('sudo chmod 644 /etc/init.d/superscript')
+os.system('sudo chmod 755 /etc/init.d/superscript')
+os.system('sudo update-rc.d superscript defaults')
 print('Done.')
