@@ -3,6 +3,8 @@
 
 ### BEGIN INIT INFO
 # Provides:         bluetooth and wifi
+# Required-Start:   
+# Required-Stop:    
 # Default-Start:    2 3 4 5
 # Default-Stop:     0 1 6
 ### END INIT INFO
