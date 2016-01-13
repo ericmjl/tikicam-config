@@ -3,7 +3,9 @@ import os
 def update_directory(dir):
     print('Updating {dir}...'.format(dir=dir))
     os.chdir(dir)
-    status = os.system('git pull')
+    status = 1
+    while status != 0:
+        status = os.system('git pull')
     if status == 0:
         print('Succeeded.')
     else:
