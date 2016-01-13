@@ -4,12 +4,15 @@ def update_directory(dir):
     print('Updating {dir}...'.format(dir=dir))
     os.chdir(dir)
     status = 1
-    while status != 0:
+    tries = 0
+    # Keep trying to git pull until success, or until tries = 30
+    while status != 0 or tries < 30:
         status = os.system('git pull')
+        tries += 1
     if status == 0:
         print('Succeeded.')
     else:
-        print('Failed')
+        print('Failed after 30 tries.')
 
 # Update picamera-auto
 update_directory('/home/pi/github/picamera-auto')
