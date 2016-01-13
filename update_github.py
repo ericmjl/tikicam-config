@@ -6,9 +6,11 @@ def update_directory(dir):
     status = 1
     tries = 0
     # Keep trying to git pull until success, or until tries = 30
-    while status != 0 or tries < 30:
+    while status != 0:
         status = os.system('git pull')
         tries += 1
+        if tries == 30:
+            break
     if status == 0:
         print('Succeeded.')
     else:
