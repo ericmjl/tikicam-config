@@ -19,7 +19,8 @@ update_directory('/home/pi/github/bluetooth-proximity-tracker')
 update_directory('/home/pi/github/tikicam-config')
 
 # Copy wpa_supplicant configuration file.
+print('Updating WPA supplicant configuration file...')
 os.chdir('/home/pi/github/tikicam-config')
 os.system('sudo cp wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf')
 os.system('sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf')
-print('Updated WPA supplicant configuration files.')
+print('Done.')
