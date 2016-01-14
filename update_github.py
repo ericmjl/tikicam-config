@@ -45,3 +45,9 @@ os.system('sudo cp superscript /etc/init.d/superscript')
 os.system('sudo chmod 755 /etc/init.d/superscript')
 os.system('sudo update-rc.d superscript defaults')
 print('Done.')
+
+# Copy remove_data.sh
+print('Updating remove_data.sh...')
+os.chdir('/home/pi/github/tikicam-config')
+os.system('sudo cp remove_data.sh ~/.')
+print('Done.')
