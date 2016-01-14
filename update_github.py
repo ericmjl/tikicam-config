@@ -49,5 +49,5 @@ print('Done.')
 # Copy remove_data.sh
 print('Updating remove_data.sh...')
 os.chdir('/home/pi/github/tikicam-config')
-os.system('sudo cp remove_data.sh /home/pi/.')
+os.system('cp remove_data.sh /home/pi/.')
 print('Done.')
