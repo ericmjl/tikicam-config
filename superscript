@@ -11,6 +11,9 @@
 
 sudo hciconfig hci0 up
 sudo ifup wlan0
-python /home/pi/github/tikicam-config/update_github.py
+cd /home/pi/github/tikicam-config/
+sudo git pull
+python update_github.py
+cd /home/pi
 sudo python /home/pi/github/picamera-auto/picam.py &
 sudo python /home/pi/github/bluetooth-proximity-tracker/le_scanner.py &
