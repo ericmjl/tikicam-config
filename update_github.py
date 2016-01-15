@@ -51,8 +51,3 @@ print('Updating remove_data.sh...')
 os.chdir('/home/pi/github/tikicam-config')
 os.system('cp remove_data.sh /home/pi/.')
 print('Done.')
-
-# Install scipy
-print('Installing scipy')
-os.system('sudo apt-get install -y python-scipy')
-print('Done.')
